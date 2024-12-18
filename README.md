@@ -47,6 +47,6 @@ The conceptual framework for this research project:
 - Model II emphasizes a disaggregated view of social interactions, incorporating ego's and alter's socio-demographic characteristics, homophily/heterogeneity between ego and alter, social relationship types, and joint activity frequency.
 
 ## Conclusion
-Bayesian Belief Networks were chosen for their ability to simultaneously model and infer complex relationships between variables. This project successfully developed two models at the ego and ego-alter levels, which are stored in the bbn/ directory.
-For a detailed explanation of the methodology and findings, please refer to the master's thesis in the ref/ directory. This GitHub repository primarily serves as documentation and showcases my data analysis skills using Python.
+Bayesian Belief Networks were chosen for their ability to simultaneously model and infer complex relationships between variables. This project successfully developed two models at the ego and ego-alter levels, which are stored in the `bbn/` directory.
+For a detailed explanation of the methodology and findings, please refer to the master's thesis in the `ref/` directory. This GitHub repository primarily serves as documentation and showcases my data analysis skills using Python.
 
