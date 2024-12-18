@@ -15,7 +15,7 @@ a = pd.read_csv('/Users/zyanchew/Desktop/social-network-synthesis/data/model1.cs
 
 # The size of social network by gender
 plt.figure(figsize=(8, 5))
-a1 = sns.boxplot(data=a, x='Gender_A', y='total_allgroups', showmeans=True,
+a1 = sns.boxplot(data=a, x='Gender', y='total_allgroups', showmeans=True,
                  meanprops={'marker': 'o', 'markerfacecolor': 'white', 'markeredgecolor': 'black', 'markersize': '3'},
                  showfliers=False, width=0.5, linewidth=0.8, palette="Blues")
 a1.set(title='Boxplot: The size of social network by gender')
@@ -28,11 +28,11 @@ plt.close()
 
 # The size of social network by age
 plt.figure(figsize=(8, 5))
-a2 = sns.boxplot(data=a, x='Age_A', y='total_allgroups', showmeans=True,
+a2 = sns.boxplot(data=a, x='Age', y='total_allgroups', showmeans=True,
                  meanprops={'marker': 'o', 'markerfacecolor': 'white', 'markeredgecolor': 'black', 'markersize': '3'},
                  showfliers=False, width=0.5, linewidth=0.8, palette="Blues")
 a2.set(title='Boxplot: The size of social network by age')
-a2.set_xticklabels(['18-25', '26-35', '36-50', '51-65', '66-75', '>75'])
+a2.set_xticklabels(['18-35', '36-50', '51-65', '>66'])
 plt.ylabel('Social Network Size')
 plt.xlabel('Age')
 plt.tight_layout()
@@ -40,7 +40,6 @@ plt.savefig('/Users/zyanchew/Desktop/social-network-synthesis/results/figures/so
 plt.close()
 
 # The size of social network by household size
-a['Householdsize'] = a['Householdsize'].replace(4, 3)
 plt.figure(figsize=(8, 5))
 a3 = sns.boxplot(data=a, x='Householdsize', y='total_allgroups', showmeans=True,
                  meanprops={'marker': 'o', 'markerfacecolor': 'white', 'markeredgecolor': 'black', 'markersize': '3'},
@@ -68,9 +67,9 @@ plt.savefig('/Users/zyanchew/Desktop/social-network-synthesis/results/figures/so
 plt.close()
 
 # The size of social network by education level
-a['Education_A'] = a['Education_A'].replace(1, 2)
+a['Education'] = a['Education'].replace(1, 2)
 plt.figure(figsize=(8, 5))
-a5 = sns.boxplot(data=a, x='Education_A', y='total_allgroups', showmeans=True,
+a5 = sns.boxplot(data=a, x='Education', y='total_allgroups', showmeans=True,
                  meanprops={'marker': 'o', 'markerfacecolor': 'white', 'markeredgecolor': 'black', 'markersize': '3'},
                  showfliers=False, width=0.5, linewidth=0.8, palette="Blues")
 a5.set(title='Boxplot: The size of social network by education level')

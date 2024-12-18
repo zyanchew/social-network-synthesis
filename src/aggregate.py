@@ -14,16 +14,16 @@ import matplotlib.pyplot as plt
 a = pd.read_csv('/Users/zyanchew/Desktop/social-network-synthesis/data/data.csv')
 
 # Select relevant columns
-ego = a[['id', 'id_contact', 'Gender_A', 'Age_A', 'Householdsize', 'MaritalStatus', 'Education_A','Paidwork', 'Income',
-         'total_friends', 'total_colleagues', 'total_neighbors', 'total_grandparents', 'total_parents', 
-         'total_siblings', 'total_children', 'total_relatives', 'total_allgroups',
-         'visit', 'receive', 'dining', 'bar', 'cinema', 'recreation', 'vacation', 'shopping']]
+ego = a[['id', 'id_contact', 'Gender', 'Age', 'Householdsize', 'MaritalStatus', 'Education','Paidwork', 'Income',
+         'Friends', 'Colleagues', 'Neighbors', 'Grandparents', 'Parents', 
+         'Siblings', 'Children', 'Otherfamilymembers', 'total_allgroups',
+         'Visit', 'Hosting', 'Dining', 'Bar', 'Cinema', 'Recreation', 'Vacation', 'Shopping']]
 
 # Remove duplicate relationships
 ego = ego.drop_duplicates(subset=['id', 'id_contact'])  # 17,486 unique relationships
 
 # Frequency columns transformation
-freq = ego[['visit', 'receive', 'dining', 'bar', 'cinema', 'recreation', 'vacation', 'shopping']]
+freq = ego[['Visit', 'Hosting', 'Dining', 'Bar', 'Cinema', 'Recreation', 'Vacation', 'Shopping']]
 freq = freq.apply(pd.to_numeric, errors='coerce').fillna(0)
 
 # Map ordinal frequency values to continuous scale (0–1)
@@ -36,10 +36,10 @@ for col in freq.columns:
     ego[col] = freq[col]
 
 # Split datasets for aggregation
-aa = ego[['id', 'visit', 'receive', 'dining', 'bar', 'cinema', 'recreation', 'vacation', 'shopping']]
-bb = ego[['id', 'Gender_A', 'Age_A', 'Householdsize', 'MaritalStatus', 'Education_A','Paidwork', 'Income',
-          'total_friends', 'total_colleagues', 'total_neighbors', 'total_grandparents', 'total_parents', 
-          'total_siblings', 'total_children', 'total_relatives', 'total_allgroups']]
+aa = ego[['id', 'Visit', 'Hosting', 'Dining', 'Bar', 'Cinema', 'Recreation', 'Vacation', 'Shopping']]
+bb = ego[['id', 'Gender', 'Age', 'Householdsize', 'MaritalStatus', 'Education','Paidwork', 'Income',
+          'Friends', 'Colleagues', 'Neighbors', 'Grandparents', 'Parents', 
+          'Siblings', 'Children', 'Otherfamilymembers', 'total_allgroups',]]
 
 # Aggregation at the individual level
 sum_1 = aa.groupby('id').sum()  # Sum of activity frequencies
@@ -51,7 +51,7 @@ print(sum_1.apply(lambda x: (x == 0).sum()))
 # Descriptive statistics for joint activities
 print("Descriptive Statistics for Joint Activity Frequencies:")
 ds=sum_1.describe()
-ds.to_csv('/Users/zyanchew/Desktop/social-network-synthesis/results/descriptive_agg_freq.csv')
+ds.to_csv('/Users/zyanchew/Desktop/social-network-synthesis/results/tables/descriptive_agg_freq.csv')
 # save descriptice statistic as a table
 
 # Visualize boxplots for all frequency columns
@@ -92,14 +92,14 @@ print(ego_2.head())
 
 # Visualize the category distribution for one column (e.g., 'visit_category')
 plt.figure(figsize=(8, 5))
-sns.countplot(x='visit_category', data=ego_2, palette='viridis', order=[1, 2, 3, 4])
+sns.countplot(x='Visit_category', data=ego_2, palette='viridis', order=[1, 2, 3, 4])
 plt.title('Distribution of Visit Frequency Categories')
 plt.xlabel('Frequency Category')
 plt.ylabel('Count')
 plt.show()
 
 # Save the cleaned and aggregated dataset
-ego_2.to_csv('/Users/zyanchew/Desktop/social-network-synthesis/results/aggregated_data.csv', index=True)
+ego_2.to_csv('/Users/zyanchew/Desktop/social-network-synthesis/results/tables/aggregated_data.csv', index=True)
 print("\nAggregated dataset saved as 'aggregated_data.csv'.")
 
 

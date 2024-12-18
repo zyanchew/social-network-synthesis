@@ -7,15 +7,14 @@ Created on Sat Dec 14 13:58:02 2024
 """
 
 import pandas as pd
-#import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load your dataset
-file_path = '/Users/zyanchew/Desktop/education/TU:e ABP-USRE/Q0708-23:24/social network/model/model2.csv'  
+file_path = '/Users/zyanchew/Desktop/social-network-synthesis/data/data.csv'  
 df = pd.read_csv(file_path, dtype="category")
-df.set_index('id', inplace=True)
 
+df.set_index('id', inplace=True)
 
 # Display the first few rows of the dataset
 print("Dataset Preview:")
@@ -41,7 +40,7 @@ print(df.describe(include=['object', 'category']))
 print("\nCategory Counts:")
 for col in df.select_dtypes(include=['object', 'category']).columns:
     print(f"\nValue Counts for {col}:")
-    print(df[col].value_counts())
+    print(df[col].value_counts(normalize=True))
 
 # Visualize distributions for numerical variables
 numerical_cols = df.select_dtypes(include=['int64', 'float64']).columns
