@@ -29,9 +29,9 @@ def save_plot(title, filename):
 des_diff = pd.DataFrame(aaa.groupby('Socialcategory')['Gender_diff'].value_counts(normalize=True))
 des_diff = des_diff.rename(columns={'proportion': 'proportion'}).reset_index()
 a1 = sns.barplot(x='Gender_diff', y='proportion',
-                 data=des_diff.assign(socialcategory=des_diff['Socialcategory'].map({1: 'friends', 2: 'colleagues', 3: 'neighbors',
-                                                                                     4: 'grandparents', 5: 'parents', 6: 'siblings',
-                                                                                     7: 'children', 8: 'relatives'})),
+                 data=des_diff.assign(Socialcategory=des_diff['Socialcategory'].map({1: 'Friends', 2: 'Colleagues', 3: 'Neighbors',
+                                                                                     4: 'Grandparents', 5: 'Parents', 6: 'Siblings',
+                                                                                     7: 'Children', 8: 'Other family members'})),
                  hue='Socialcategory', palette="Paired")
 plt.xlabel('Gender Difference')
 plt.xticks([0, 1], ['Same', 'Different'])
@@ -41,9 +41,9 @@ save_plot('Distribution of gender difference according to social categories', 'g
 des_diff = pd.DataFrame(aaa.groupby('Socialcategory')['Age_diff'].value_counts(normalize=True))
 des_diff = des_diff.rename(columns={'proportion': 'proportion'}).reset_index()
 a1 = sns.barplot(x='Age_diff', y='proportion',
-                 data=des_diff.assign(socialcategory=des_diff['Socialcategory'].map({1: 'friends', 2: 'colleagues', 3: 'neighbors',
-                                                                                     4: 'grandparents', 5: 'parents', 6: 'siblings',
-                                                                                     7: 'children', 8: 'relatives'})),
+                 data=des_diff.assign(Socialcategory=des_diff['Socialcategory'].map({1: 'Friends', 2: 'Colleagues', 3: 'Neighbors',
+                                                                                     4: 'Grandparents', 5: 'Parents', 6: 'Siblings',
+                                                                                     7: 'Children', 8: 'Other family members'})),
                  hue='Socialcategory', palette="Paired")
 plt.xlabel('Age Difference')
 save_plot('Distribution of age difference according to social categories', 'age_difference_social_categories')
@@ -52,9 +52,9 @@ save_plot('Distribution of age difference according to social categories', 'age_
 des_diff = pd.DataFrame(aaa.groupby('Socialcategory')['Edu_diff'].value_counts(normalize=True))
 des_diff = des_diff.rename(columns={'proportion': 'proportion'}).reset_index()
 a1 = sns.barplot(x='Edu_diff', y='proportion',
-                 data=des_diff.assign(socialcategory=des_diff['Socialcategory'].map({1: 'friends', 2: 'colleagues', 3: 'neighbors',
-                                                                                     4: 'grandparents', 5: 'parents', 6: 'siblings',
-                                                                                     7: 'children', 8: 'relatives'})),
+                 data=des_diff.assign(Socialcategory=des_diff['Socialcategory'].map({1: 'Friends', 2: 'Colleagues', 3: 'Neighbors',
+                                                                                     4: 'Grandparents', 5: 'Parents', 6: 'Siblings',
+                                                                                     7: 'Children', 8: 'Other family members'})),
                  hue='Socialcategory', palette="Paired")
 plt.xlabel('Education Difference')
 plt.xticks([0, 1, 2], ['Lower', 'Same', 'Higher'])
@@ -64,9 +64,9 @@ save_plot('Distribution of education difference according to social categories',
 des_diff = pd.DataFrame(aaa.groupby('Socialcategory')['Duration'].value_counts(normalize=True))
 des_diff = des_diff.rename(columns={'proportion': 'proportion'}).reset_index()
 a1 = sns.barplot(x='Duration', y='proportion',
-                 data=des_diff.assign(socialcategory=des_diff['Socialcategory'].map({1: 'friends', 2: 'colleagues', 3: 'neighbors',
-                                                                                     4: 'grandparents', 5: 'parents', 6: 'siblings',
-                                                                                     7: 'children', 8: 'relatives'})),
+                 data=des_diff.assign(Socialcategory=des_diff['Socialcategory'].map({1: 'Friends', 2: 'Colleagues', 3: 'Neighbors',
+                                                                                     4: 'Grandparents', 5: 'Parents', 6: 'Siblings',
+                                                                                     7: 'Children', 8: 'Other family members'})),
                  hue='Socialcategory', palette="Paired")
 plt.xlabel('Relationship Duration')
 plt.xticks([0, 1, 2], ['<5 years', '5-15 years', '>15 years'])
@@ -76,9 +76,9 @@ save_plot('Distribution of relationship duration according to social categories'
 des_diff = pd.DataFrame(aaa.groupby('Socialcategory')['Distance'].value_counts(normalize=True))
 des_diff = des_diff.rename(columns={'proportion': 'proportion'}).reset_index()
 a1 = sns.barplot(x='Distance', y='proportion',
-                 data=des_diff.assign(socialcategory=des_diff['Socialcategory'].map({1: 'friends', 2: 'colleagues', 3: 'neighbors',
-                                                                                     4: 'grandparents', 5: 'parents', 6: 'siblings',
-                                                                                     7: 'children', 8: 'relatives'})),
+                 data=des_diff.assign(Socialcategory=des_diff['Socialcategory'].map({1: 'Friends', 2: 'Colleagues', 3: 'Neighbors',
+                                                                                     4: 'Grandparents', 5: 'Parents', 6: 'Siblings',
+                                                                                     7: 'Children', 8: 'Other family members'})),
                  hue='Socialcategory', palette="Paired")
 plt.xlabel('Distance')
 plt.xticks([0, 1, 2, 3, 4], ['<1km', '1-10km', '10-50km', '>50km', 'Abroad'])
