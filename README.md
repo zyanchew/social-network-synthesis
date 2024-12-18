@@ -39,7 +39,7 @@ Model II explores:
 ## Methodology
 This research employed Bayesian Belief Networks to model the interdependencies between social network and travel behavior using GeNIe software. The conceptual framework for this research project:
 
-[Concentual Framework](ref/con_framework.png)
+![Concentual Framework](ref/con_framework.png)
 
 Model I systhesize individual's socio-demographic characteristics, composition, size of social networks with joint activities frequecies to study the relationships among them at ego level. While Model II emphasize a disaggregated perspective of social interaction, which synthesize ego's and alter's socio-demographic characteristics, homophily/heterogeinety in social relationship, social relationship types and joint activity frequency. 
 
