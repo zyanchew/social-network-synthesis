@@ -1,5 +1,5 @@
 # Social network analysis project
-This research project aims to explore the influence of social networks on travel behavior, specifically how social interaction between individuals and their social network members would influence the frequency of various joint activities. The composition and dynamics of social networks are investigated through two models:
+This research project explores the influence of social networks on travel behavior, focusing on how interactions between individuals and their social network members affect the frequency of joint activities. The dynamics of social networks and joint activities frequncy are analyzed through two models:
 
 ### Model I: Social Network Size, Composition and Joint Activities at Ego Level
 Model I examines:
@@ -14,8 +14,8 @@ Model I examines:
 
 ### Model II: Social Relationships and Joint Activities at Ego-Alter Level
 Model II explores:
-- How differences (or similarities) between egos and alters influence joint activity frequency.
-- The impact of gender, age, education differences, geographical distance, relationship duration, and social categories on joint activity frequency.
+- The influence of differences (or similarities) between egos and alters on joint activity frequency.
+- The effects of gender, age, education differences, geographical distance, relationship duration, and social categories on joint activity frequency.
 
 **Key Variables**:
 - Differences in gender, age, education, geographical distance, and relationship duration.
@@ -23,8 +23,8 @@ Model II explores:
 
 ## Directory Structure
 - `data/`: Stores raw datasets.
-- `bbn/`: Stores the developed models.
-- `ref/`: Figures that referenced in README.md.
+- `bbn/`: Contains the developed Bayesian Belief Network models.
+- `ref/`: Includes figures and references, including the master's thesis.
 - `results/`: Generated tables, figures, and analysis outputs.
   -`figures/`: Generated graphs.
   -`tables/`: Generated tables.
@@ -37,11 +37,16 @@ Model II explores:
 
 
 ## Methodology
-This research employed Bayesian Belief Networks to model the interdependencies between social network and travel behavior using GeNIe software. The conceptual framework for this research project:
+This research employed Bayesian Belief Networks (BBNs) to model the interdependencies between social network and travel behavior. The analysis uses GeNIe software to reason probabilistically and infer relationships between multiple variables.
+
+The conceptual framework for this research project:
 
 ![Concentual Framework](ref/con_framework.png)
 
-Model I systhesize individual's socio-demographic characteristics, composition, size of social networks with joint activities frequecies to study the relationships among them at ego level. While Model II emphasize a disaggregated perspective of social interaction, which synthesize ego's and alter's socio-demographic characteristics, homophily/heterogeinety in social relationship, social relationship types and joint activity frequency. 
+- Model I synthesizes individuals' socio-demographic characteristics, social network composition, and joint activity frequencies at the ego level.
+- Model II emphasizes a disaggregated view of social interactions, incorporating ego's and alter's socio-demographic characteristics, homophily/heterogeneity between ego and alter, social relationship types, and joint activity frequency.
 
-## Results
+## Conclusion
+Bayesian Belief Networks were chosen for their ability to simultaneously model and infer complex relationships between variables. This project successfully developed two models at the ego and ego-alter levels, which are stored in the bbn/ directory.
+For a detailed explanation of the methodology and findings, please refer to the master's thesis in the ref/ directory. This GitHub repository primarily serves as documentation and showcases my data analysis skills using Python.
 
