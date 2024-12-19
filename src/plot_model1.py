@@ -67,7 +67,6 @@ plt.savefig('/Users/zyanchew/Desktop/social-network-synthesis/results/figures/so
 plt.close()
 
 # The size of social network by education level
-a['Education'] = a['Education'].replace(1, 2)
 plt.figure(figsize=(8, 5))
 a5 = sns.boxplot(data=a, x='Education', y='total_allgroups', showmeans=True,
                  meanprops={'marker': 'o', 'markerfacecolor': 'white', 'markeredgecolor': 'black', 'markersize': '3'},
