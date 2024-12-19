@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only -->
+<smile version="1.0" id="aggregated_data" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Gender">
+			<state id="State1" />
+			<state id="State2" />
+			<probabilities>0.4937402190923318 0.5062597809076682</probabilities>
+		</cpt>
+		<cpt id="Age">
+			<state id="State1" />
+			<state id="State2" />
+			<state id="State3" />
+			<state id="State4" />
+			<probabilities>0.3020344287949922 0.2910798122065728 0.2942097026604069 0.1126760563380282</probabilities>
+		</cpt>
+		<cpt id="Householdsize">
+			<state id="State1" />
+			<state id="State2" />
+			<state id="State3" />
+			<probabilities>0.2151799687010955 0.4154929577464789 0.3693270735524257</probabilities>
+		</cpt>
+		<cpt id="MaritalStatus">
+			<state id="State1" />
+			<state id="State2" />
+			<state id="State3" />
+			<state id="State4" />
+			<probabilities>0.215962441314554 0.377151799687011 0.1846635367762128 0.2222222222222222</probabilities>
+		</cpt>
+		<cpt id="Education">
+			<state id="State1" />
+			<state id="State2" />
+			<probabilities>0.6173708920187794 0.3826291079812207</probabilities>
+		</cpt>
+		<cpt id="Paidwork">
+			<state id="s1_below_8" />
+			<state id="s2_8_36" />
+			<state id="s3_36_up" />
+			<probabilities>0.3302034428794992 0.3082942097026604 0.3615023474178404</probabilities>
+		</cpt>
+		<cpt id="Income">
+			<state id="State1" />
+			<state id="State2" />
+			<state id="State3" />
+			<state id="State4" />
+			<state id="State5" />
+			<probabilities>0.1158059467918623 0.2245696400625978 0.2582159624413146 0.269170579029734 0.1322378716744914</probabilities>
+		</cpt>
+		<cpt id="Grandparents">
+			<state id="s1_0" />
+			<state id="s2_1_up" />
+			<parents>Age Householdsize MaritalStatus</parents>
+			<probabilities>0.5 0.5 0.75 0.25 0.5 0.5 0.5 0.5 0.5 0.5 0.4724409448818898 0.5275590551181102 0.5 0.5 0.5 0.5 0.5 0.5 0.3181818181818182 0.6818181818181819 0.3571428571428571 0.6428571428571428 0.3103448275862069 0.6896551724137931 0.8765432098765431 0.1234567901234568 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.8500000000000001 0.15 0.5 0.5 0.75 0.25 0.5 0.5 0.75 0.25 0.5575221238938053 0.4424778761061947 0.691358024691358 0.308641975308642 0.9418604651162791 0.05813953488372093 0.5 0.5 0.5 0.5 0.5 0.5 0.75 0.25 0.8805031446540881 0.119496855345912 0.8333333333333333 0.1666666666666667 0.9473684210526315 0.05263157894736842 0.75 0.25 0.8333333333333333 0.1666666666666667 0.6666666666666666 0.3333333333333333 0.8333333333333333 0.1666666666666667 0.8787878787878788 0.1212121212121212 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.9325842696629213 0.06741573033707865 0.8333333333333333 0.1666666666666667 0.9583333333333333 0.04166666666666666 0.5 0.5 0.75 0.25 0.5 0.5 0.875 0.125</probabilities>
+		</cpt>
+		<cpt id="Visit">
+			<state id="very_low" />
+			<state id="low" />
+			<state id="high" />
+			<state id="very_high" />
+			<parents>Grandparents</parents>
+			<probabilities>0.2909698996655518 0.2686733556298774 0.2385730211817168 0.201783723522854 0.1469816272965879 0.2099737532808399 0.2782152230971129 0.3648293963254593</probabilities>
+		</cpt>
+		<cpt id="Friends">
+			<state id="s1_below_2" />
+			<state id="s2_2" />
+			<state id="s3_3_5" />
+			<state id="s4_6_up" />
+			<parents>Visit</parents>
+			<probabilities>0.2870662460567823 0.1924290220820189 0.277602523659306 0.2429022082018927 0.205607476635514 0.2616822429906542 0.2834890965732087 0.2492211838006231 0.1625 0.184375 0.334375 0.31875 0.140625 0.146875 0.3125 0.4</probabilities>
+		</cpt>
+		<cpt id="Colleagues">
+			<state id="s1_0" />
+			<state id="s2_1_3" />
+			<state id="s3_4_up" />
+			<parents>Paidwork</parents>
+			<probabilities>0.6824644549763034 0.1800947867298578 0.1374407582938389 0.182741116751269 0.4263959390862944 0.3908629441624365 0.1168831168831169 0.4112554112554113 0.4718614718614719</probabilities>
+		</cpt>
+		<cpt id="Neighbors">
+			<state id="s1_0" />
+			<state id="s2_1_3" />
+			<state id="s3_4_up" />
+			<parents>Age</parents>
+			<probabilities>0.3730569948186528 0.3212435233160622 0.305699481865285 0.2258064516129032 0.3978494623655914 0.3763440860215054 0.175531914893617 0.4069148936170213 0.4175531914893617 0.1111111111111111 0.4791666666666666 0.4097222222222222</probabilities>
+		</cpt>
+		<cpt id="Parents">
+			<state id="s1_0" />
+			<state id="s2_1_up" />
+			<parents>Age Householdsize MaritalStatus</parents>
+			<probabilities>0.01351351351351351 0.9864864864864865 0.25 0.75 0.5 0.5 0.5 0.5 0.5 0.5 0.08661417322834646 0.9133858267716535 0.25 0.75 0.1666666666666667 0.8333333333333333 0.5 0.5 0.09090909090909091 0.9090909090909092 0.08163265306122448 0.9183673469387754 0.06896551724137931 0.9310344827586207 0.2222222222222222 0.7777777777777777 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.1375 0.8625 0.125 0.875 0.375 0.625 0.5 0.5 0.25 0.75 0.1238938053097345 0.8761061946902655 0.1851851851851852 0.8148148148148148 0.5930232558139534 0.4069767441860465 0.5 0.5 0.5 0.5 0.5 0.5 0.25 0.75 0.5974842767295597 0.4025157232704403 0.8333333333333333 0.1666666666666667 0.5526315789473684 0.4473684210526315 0.75 0.25 0.5 0.5 0.1111111111111111 0.8888888888888888 0.5 0.5 0.8787878787878788 0.1212121212121212 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.8876404494382022 0.1123595505617977 0.8333333333333333 0.1666666666666667 0.8181818181818182 0.1818181818181818 0.5 0.5 0.75 0.25 0.5 0.5 0.875 0.125</probabilities>
+		</cpt>
+		<cpt id="Siblings">
+			<state id="s1_0" />
+			<state id="s2_1_2" />
+			<state id="s3_3_up" />
+			<probabilities>0.1674491392801252 0.4514866979655712 0.3810641627543036</probabilities>
+		</cpt>
+		<cpt id="Children">
+			<state id="s1_0" />
+			<state id="s2_1_up" />
+			<parents>Age Householdsize MaritalStatus</parents>
+			<probabilities>0.9324324324324325 0.06756756756756757 0.75 0.25 0.5 0.5 0.5 0.5 0.5 0.5 0.984251968503937 0.01574803149606299 0.25 0.75 0.8333333333333333 0.1666666666666667 0.5 0.5 0.9782608695652174 0.02173913043478261 0.3673469387755102 0.6326530612244897 0.9137931034482758 0.08620689655172414 0.8148148148148148 0.1851851851851852 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.7250000000000001 0.275 0.125 0.875 0.05555555555555555 0.9444444444444444 0.5 0.5 0.25 0.75 0.2831858407079646 0.7168141592920354 0.2716049382716049 0.728395061728395 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.75 0.25 0.3144654088050315 0.6855345911949686 0.1666666666666667 0.8333333333333333 0.07894736842105263 0.9210526315789473 0.25 0.75 0.5 0.5 0.2222222222222222 0.7777777777777777 0.1153846153846154 0.8846153846153846 0.3333333333333334 0.6666666666666667 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.1797752808988764 0.8202247191011236 0.1666666666666667 0.8333333333333333 0.04166666666666666 0.9583333333333333 0.5 0.5 0.75 0.25 0.5 0.5 0.375 0.625</probabilities>
+		</cpt>
+		<cpt id="Otherfamilymembers">
+			<state id="s1_0" />
+			<state id="s2_1_4" />
+			<state id="s3_5_up" />
+			<parents>Age</parents>
+			<probabilities>0.266839378238342 0.2435233160621762 0.4896373056994819 0.3118279569892473 0.3360215053763441 0.3521505376344086 0.3537234042553191 0.3882978723404255 0.2579787234042553 0.4444444444444444 0.3263888888888889 0.2291666666666667</probabilities>
+		</cpt>
+		<cpt id="Hosting">
+			<state id="very_low" />
+			<state id="low" />
+			<state id="high" />
+			<state id="very_high" />
+			<parents>Grandparents Children</parents>
+			<probabilities>0.3391521197007481 0.2768079800498753 0.2244389027431421 0.1596009975062344 0.217741935483871 0.2540322580645161 0.2762096774193548 0.2520161290322581 0.2246696035242291 0.2863436123348018 0.1894273127753304 0.2995594713656388 0.09740259740259741 0.1948051948051948 0.3116883116883117 0.3961038961038961</probabilities>
+		</cpt>
+		<cpt id="Dining">
+			<state id="very_low" />
+			<state id="low" />
+			<state id="high" />
+			<state id="very_high" />
+			<parents>Colleagues</parents>
+			<probabilities>0.3719806763285024 0.2657004830917875 0.21256038647343 0.1497584541062802 0.2050691244239631 0.2511520737327189 0.2580645161290323 0.2857142857142857 0.2209302325581395 0.2046511627906977 0.2651162790697674 0.3093023255813954</probabilities>
+		</cpt>
+		<cpt id="Recreation">
+			<state id="low" />
+			<state id="high" />
+			<parents>Colleagues</parents>
+			<probabilities>0.6135265700483091 0.3864734299516908 0.4516129032258064 0.5483870967741935 0.4837209302325581 0.5162790697674419</probabilities>
+		</cpt>
+		<cpt id="Vacation">
+			<state id="low" />
+			<state id="high" />
+			<parents>Otherfamilymembers</parents>
+			<probabilities>0.6274038461538461 0.3725961538461539 0.5169902912621359 0.483009708737864 0.4622222222222222 0.5377777777777778</probabilities>
+		</cpt>
+		<cpt id="Shopping">
+			<state id="low" />
+			<state id="high" />
+			<parents>Gender</parents>
+			<probabilities>0.5736925515055468 0.4263074484944533 0.4265842349304482 0.5734157650695517</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 5.0.4722.0 ACADEMIC" name="aggregated_data">
+			<node id="Gender">
+				<name>Gender</name>
+				<interior color="ffffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>521 280 573 312</position>
+			</node>
+			<node id="Age">
+				<name>Age</name>
+				<interior color="ffffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>601 404 641 429</position>
+			</node>
+			<node id="Householdsize">
+				<name>Householdsize</name>
+				<interior color="ffffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>801 357 885 409</position>
+			</node>
+			<node id="MaritalStatus">
+				<name>MaritalStatus</name>
+				<interior color="ffffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>688 390 763 436</position>
+			</node>
+			<node id="Education">
+				<name>Education</name>
+				<interior color="ffffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>28 289 90 327</position>
+			</node>
+			<node id="Paidwork">
+				<name>Paidwork</name>
+				<interior color="ffffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>477 349 536 385</position>
+			</node>
+			<node id="Income">
+				<name>Income</name>
+				<interior color="ffffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>32 359 84 391</position>
+			</node>
+			<node id="Friends">
+				<name>Friends</name>
+				<interior color="ffffca" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>701 82 753 114</position>
+			</node>
+			<node id="Colleagues">
+				<name>Colleagues</name>
+				<interior color="ffffca" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>380 315 448 357</position>
+			</node>
+			<node id="Neighbors">
+				<name>Neighbors</name>
+				<interior color="ffffca" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>481 425 545 465</position>
+			</node>
+			<node id="Grandparents">
+				<name>Grandparents</name>
+				<interior color="ffffca" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>770 222 850 272</position>
+			</node>
+			<node id="Parents">
+				<name>Parents</name>
+				<interior color="ffffca" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>610 226 664 259</position>
+			</node>
+			<node id="Siblings">
+				<name>Siblings</name>
+				<interior color="ffffca" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>56 425 108 457</position>
+			</node>
+			<node id="Children">
+				<name>Children</name>
+				<interior color="ffffca" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>816 525 872 560</position>
+			</node>
+			<node id="Otherfamilymembers">
+				<name>Otherfamilymembers</name>
+				<interior color="ffffca" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>581 496 693 566</position>
+			</node>
+			<node id="Visit">
+				<name>Visit</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>684 173 725 198</position>
+			</node>
+			<node id="Hosting">
+				<name>Hosting</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>931 293 983 325</position>
+			</node>
+			<node id="Dining">
+				<name>Dining</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>349 223 397 253</position>
+			</node>
+			<node id="Recreation">
+				<name>Recreation</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>278 274 344 315</position>
+			</node>
+			<node id="Vacation">
+				<name>Vacation</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>456 542 513 577</position>
+			</node>
+			<node id="Shopping">
+				<name>Shopping</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>441 197 500 233</position>
+			</node>
+			<textbox>
+				<caption>Input file: aggregated_data.csv\nData rows: 1278\nElapsed time: 0.999s\n\nLearning algorithm: Bayesian Search\nAlgorithm parameters:\nIterations: 100\nMax parent count: 8\nSample size: 200\nLink probability: 0.1\nPrior link probability: 0.001\nSeed: 10\nMax search time: 0\nBackground knowledge was provided:\n  forbidden arcs: 226\n\nBest score in iteration 46: -26980.6\nEM Log Likelihood: -26478</caption>
+				<font color="000000" name="Arial" size="8" />
+				<position>13 10 198 262</position>
+			</textbox>
+		</genie>
+	</extensions>
+</smile>
